@@ -2,7 +2,6 @@ import requests
 import json
 import sys, os
 
-
 myURL1 = "http://www.kantv6.com/index.php/video/play?tvid={}&line=1&seo={}"
 myURL2 = "http://www.kantv6.com/index.php/video/play?tvid={}&part_id={}&line=1&seo={}"
 fake_header = {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'}
