@@ -2,7 +2,7 @@
 
 ## 使用方法
 
-```
+```bash
 python kantv.py <URL>
 ```
 
@@ -10,15 +10,15 @@ python kantv.py <URL>
 
 * Ubuntu用户可以用下面命令安装
 
-```
-$ sudo apt update
-$ sudo apt install ffmpeg
+```bash
+sudo apt update
+sudo apt install ffmpeg
 ```
 
 * Mac OS用户可以用下面的命令安装
 
 ```
-$ brew install ffmpeg
+brew install ffmpeg
 ```
 
 （当然，前提条件是安装了homebrew）
