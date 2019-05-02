@@ -2,8 +2,8 @@ import requests
 import json
 import sys, os
 
-myURL1 = "http://www.kantv6.com/index.php/video/play?tvid={}&line=1&seo={}"
-myURL2 = "http://www.kantv6.com/index.php/video/play?tvid={}&part_id={}&line=1&seo={}"
+myURL_base   = "http://www.kantv6.com/index.php/video/play?tvid={}&line=1&seo={}"
+myURL_extend = "http://www.kantv6.com/index.php/video/play?tvid={}&part_id={}&line=1&seo={}"
 fake_header = {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'}
 
 def reconstruct_link(url):
@@ -13,10 +13,10 @@ def reconstruct_link(url):
     seo   = parts[-2]
     parts = parts[-1].split("-")
     tvid = parts[0]
-    link = myURL1.format(tvid, seo)
+    link = myURL_base.format(tvid, seo)
     if len(parts) > 1:
         part_id = parts[1]
-        link = myURL2.format(tvid, part_id, seo)
+        link = myURL_extend.format(tvid, part_id, seo)
     return link
 
 def get_m3u8_url(url):
