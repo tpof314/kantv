@@ -32,7 +32,7 @@ $ brew install ffmpeg
 
 ## 其他需要的python库
 
-```
+```bash
 pip install requests
 pip install beautifulsoup4
 ```
